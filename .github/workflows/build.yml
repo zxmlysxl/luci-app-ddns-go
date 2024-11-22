@@ -1,13 +1,11 @@
 name: Build
 
 on:
+  branches:
+      - main
   push:
     tags:
-      - "*"
-  schedule:
-    - cron: '0 2 * * *'
-  workflow_dispatch:
-  
+      - "*" 
 jobs:
   build:
     name: Build ${{ matrix.arch }}-${{ matrix.sdk }}
