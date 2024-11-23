@@ -1,7 +1,9 @@
 name: Build
 
 on:
-  workflow_dispatch:
+  push:
+    tags:
+      - "*"
 jobs:
   build:
     name: Build ${{ matrix.arch }}-${{ matrix.sdk }}
